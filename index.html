@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Teatdocument3</title>
+    <title>Teatdocument４</title>
 </head>
 <body>
     <div>Teachable Machine Image Model2</div>
@@ -62,7 +62,7 @@
                        
             for(let i = 0; i < maxPredictions; i++) array1[i]=array1[i]+Number(prediction[i].probability.toFixed(2));
             
-            if(array1[0]>8){
+            if(array1[0]>80){
 
                 const str = "球";
                 labelContainer.childNodes[0].innerHTML=str.link("https://akizukidenshi.com/catalog/top.aspx")
@@ -70,7 +70,7 @@
                 //for(let i = 0; i < maxPredictions; i++)array1[i]=0;                
                 
             }
-            else if(array1[1]>8){
+            else if(array1[1]>80){
 
                 const str = "箱";
                 labelContainer.childNodes[0].innerHTML=str.link("https://akizukidenshi.com/catalog/top.aspx") 
@@ -80,9 +80,7 @@
             }
             else if (array1[2]>8){
 
-                const str = "無";
-                labelContainer.childNodes[0].innerHTML=str.link("https://akizukidenshi.com/catalog/top.aspx")
- 
+                labelContainer.childNodes[0].innerHTML="無"
                 //for(let i = 0; i < maxPredictions; i++)array1[i]=0;
             }
             else {
