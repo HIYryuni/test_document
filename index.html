@@ -6,7 +6,7 @@
     <title>Teatdocument3</title>
 </head>
 <body>
-    <div>Teachable Machine Image Model</div>
+    <div>Teachable Machine Image Model2</div>
     <button type="button" onclick="init()">Start</button>
     <div id="webcam-container"></div>
     <div id="label-container"></div>
@@ -67,7 +67,7 @@
                 const str = "球";
                 labelContainer.childNodes[0].innerHTML=str.link("https://akizukidenshi.com/catalog/top.aspx")
 
-                for(let i = 0; i < maxPredictions; i++)array1[i]=0;                
+                //for(let i = 0; i < maxPredictions; i++)array1[i]=0;                
                 
             }
             else if(array1[1]>8){
@@ -75,7 +75,7 @@
                 const str = "箱";
                 labelContainer.childNodes[0].innerHTML=str.link("https://akizukidenshi.com/catalog/top.aspx") 
 
-                for(let i = 0; i < maxPredictions; i++)array1[i]=0;                
+                //for(let i = 0; i < maxPredictions; i++)array1[i]=0;                
                 
             }
             else if (array1[2]>8){
@@ -83,7 +83,7 @@
                 const str = "無";
                 labelContainer.childNodes[0].innerHTML=str.link("https://akizukidenshi.com/catalog/top.aspx")
  
-                for(let i = 0; i < maxPredictions; i++)array1[i]=0;
+                //for(let i = 0; i < maxPredictions; i++)array1[i]=0;
             }
             else {
                 labelContainer.childNodes[0].innerHTML="認識中"
