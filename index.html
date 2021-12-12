@@ -58,7 +58,13 @@
         // run the webcam image through the image model
         async function predict() {
             // predict can take in an image, video or canvas html element
-            const prediction = await model.predict(webcam.canvas);     
+            const prediction = await model.predict(webcam.canvas);
+            for (let i = 0; i < maxPredictions; i++) {
+            const classPrediction =
+                prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+            labelContainer.childNodes[i].innerHTML = classPrediction;
+        }
+            /*     
             for(let i = 0; i < maxPredictions; i++) array1[i]=array1[i]+Number(prediction[i].probability.toFixed(2));
            
             if(array1[0]>8){
@@ -83,7 +89,7 @@
                 labelContainer.childNodes[0].innerHTML=str.link("https://akizukidenshi.com/catalog/top.aspx")
  
                 for(let i = 0; i < maxPredictions; i++)array1[i]=0;
-            }
+            }*/
 
         }
     </script>
