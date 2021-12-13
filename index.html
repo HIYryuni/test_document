@@ -62,34 +62,26 @@
                        
             for(let i = 0; i < maxPredictions; i++) array1[i]=array1[i]+Number(prediction[i].probability.toFixed(2));
             
-            if(array1[0]>10){
+            if(array1[0]>20){
 
                 const str = "XT";
-                //labelContainer.childNodes[0].innerHTML=str.link("https://akizukidenshi.com/catalog/top.aspx")
                 window.location.href="./XT.html"
-                //for(let i = 0; i < maxPredictions; i++)array1[i]=0;                
                 
             }
-            else if(array1[1]>10){
+            else if(array1[1]>20){
 
                 const str = "T型";
-                //labelContainer.childNodes[0].innerHTML=str.link("https://akizukidenshi.com/catalog/top.aspx") 
-                window.location.href="./T型.html"
-                //for(let i = 0; i < maxPredictions; i++)array1[i]=0;                
+                window.location.href="./T型.html"             
                 
             }
-            else if (array1[2]>10){
+            else if (array1[2]>8){
 
                 labelContainer.childNodes[0].innerHTML="無"
-                //for(let i = 0; i < maxPredictions; i++)array1[i]=0;
             }
             else {
                 labelContainer.childNodes[0].innerHTML="認識中"
             }
 
-            if(array1[0]>80 || array1[1]>80 || array1[2]>80){
-                for(let i = 0; i < maxPredictions; i++)array1[i]=0;
-            }
             
         }
     </script>
