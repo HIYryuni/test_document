@@ -62,13 +62,13 @@
                        
             for(let i = 0; i < maxPredictions; i++) array1[i]=array1[i]+Number(prediction[i].probability.toFixed(2));
             
-            if(array1[0]>20){
+            if(array1[0]>40){
 
                 const str = "XT";
                 window.location.href="./XT.html"
                 
             }
-            else if(array1[1]>20){
+            else if(array1[1]>40){
 
                 const str = "T型";
                 window.location.href="./T型.html"             
