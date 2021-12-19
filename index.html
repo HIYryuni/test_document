@@ -87,7 +87,7 @@
                 labelContainer.childNodes[0].innerHTML="無"
                 for(let i=0; i<maxPredictions; i++)array1[i]=0;
             }
-            else if(array1[1]>40){
+            else if(array1[3]>40){
 
                 const str = "3.5mmジャック";
                 window.location.href="./3.5mm.html"             
@@ -98,10 +98,10 @@
             }
 
             const data = { 
-                labels: ['A', 'B', 'C', 'D', 'E'], 
+                labels: ['XT', 'T型', '無', '3.5mmジャック' ], 
                 datasets: [{ 
                     label: '各クラスの確率和', 
-                    data: [78, 64, 35, 90, 83] ,
+                    data: [array1[0], array1[1], array1[2], array1[3] ] ,
                     backgroundColor: '#FF6384',
                 }]} // グラフを描画 --- (*2) 
             const ctx = document.getElementById('chart_cv') 
