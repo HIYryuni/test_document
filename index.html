@@ -20,8 +20,7 @@
     <script type="text/javascript" 
      src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"> 
     </script>
-    <canvas id="chart"></canvas>
-    
+    <canvas id="chart_cv"></canvas>
     <script type="text/javascript">
 
 
@@ -71,13 +70,13 @@
                        
             for(let i = 0; i < maxPredictions; i++) array1[i]=array1[i]+Number(prediction[i].probability.toFixed(2));
             
-            if(array1[0]>60){
+            if(array1[0]>80){
 
                 const str = "XT";
                 window.location.href="./XT.html"
                 
             }
-            else if(array1[1]>60){
+            else if(array1[1]>80){
 
                 const str = "T型";
                 window.location.href="./T型.html"             
@@ -88,7 +87,7 @@
                 labelContainer.childNodes[0].innerHTML="無"
                 for(let i=0; i<maxPredictions; i++)array1[i]=0;
             }
-            else if(array1[3]>60){
+            else if(array1[3]>80){
 
                 const str = "3.5mmジャック";
                 window.location.href="./3.5mm.html"             
