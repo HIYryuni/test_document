@@ -70,13 +70,13 @@
                        
             for(let i = 0; i < maxPredictions; i++) array1[i]=array1[i]+Number(prediction[i].probability.toFixed(2));
             
-            if(array1[0]>80){
+            if(array1[0]>40){
 
                 const str = "XT";
                 window.location.href="./XT.html"
                 
             }
-            else if(array1[1]>80){
+            else if(array1[1]>40){
 
                 const str = "T型";
                 window.location.href="./T型.html"             
@@ -87,7 +87,7 @@
                 labelContainer.childNodes[0].innerHTML="無"
                 for(let i=0; i<maxPredictions; i++)array1[i]=0;
             }
-            else if(array1[3]>80){
+            else if(array1[3]>40){
 
                 const str = "3.5mmジャック";
                 window.location.href="./3.5mm.html"             
